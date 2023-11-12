@@ -25,9 +25,12 @@ def checkwin(xstate, zstate):
         if (sum(xstate[win[0]],xstate[win[1]], xstate[win[2]])==3):
             print("X won the match")
             return 1
-        if (sum(xstate[win[0]],xstate[win[1]], xstate[win[2]])==3):
+        if (sum(zstate[win[0]],zstate[win[1]], zstate[win[2]])==3):
             print("O won the match")
             return 0
+        
+            
+        
     return -1    
 if __name__ == "__main__":
     xstate= [0,0,0,0,0,0,0,0,0,0]
@@ -48,6 +51,4 @@ if __name__ == "__main__":
         if(cwin != -1):
             print("match over")
             break
-        turn = 1 - turn   
-      
-     
+        turn = 1 - turn  
